@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Cog } from "lucide-react";
 
 export default function MaintenancePage() {
   const [mounted, setMounted] = useState(false);
@@ -53,16 +54,22 @@ export default function MaintenancePage() {
               }`}
           >
             {/* Logo */}
-            <div className="mb-8 flex justify-center md:mb-12">
-              <div className="relative h-20 w-20 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-[var(--neutral-200)] transition-transform duration-300 hover:scale-105 md:h-24 md:w-24">
-                <Image
-                  src="/pintarly_logo.png"
-                  alt="Pintarly Logo"
-                  fill
-                  className="object-cover p-3"
-                  priority
-                />
-              </div>
+            <div className="mb-8 flex items-center justify-center gap-4 md:mb-12">
+              {/* Logo */}
+              <Image
+                src="/logo/logo.svg"
+                alt="Pintarly Logo"
+                width={80}
+                height={80}
+                className="h-20 w-20 transition-transform duration-300 hover:scale-105 md:h-24 md:w-24"
+                priority
+              />
+
+              {/* Spinning Gear */}
+              <Cog
+                className="h-12 w-12 text-[var(--blue-600)] md:h-14 md:w-14"
+                style={{ animation: 'spin 3s linear infinite' }}
+              />
             </div>
 
             {/* Main Card */}
@@ -90,7 +97,7 @@ export default function MaintenancePage() {
 
               {/* Description */}
               <p className="mb-8 text-center text-base leading-relaxed text-[var(--neutral-600)] md:text-lg md:leading-relaxed">
-                Pintarly sedang dalam proses pemeliharaan untuk meningkatkan pengalaman belajar Anda.
+                Pintarly sedang dalam proses pemeliharaan untuk menambahkan fitur-fitur baru yang akan meningkatkan pengalaman belajar Anda.
                 Kami akan segera kembali dengan fitur dan performa yang lebih baik!
               </p>
 
@@ -115,7 +122,7 @@ export default function MaintenancePage() {
                       Estimasi Waktu Penyelesaian
                     </p>
                     <p className="font-['Outfit'] text-lg font-bold text-[var(--black-charcoal)] md:text-xl">
-                      2-6 Jam
+                      2-3 Jam
                     </p>
                   </div>
                 </div>
