@@ -153,10 +153,10 @@ export default function MaintenancePage() {
                   <p className="text-sm text-[var(--neutral-600)] md:text-base">
                     Hubungi kami di{" "}
                     <a
-                      href="mailto:support@pintarly.com"
+                      href="mailto:support@pintarly.id"
                       className="font-semibold text-[var(--blue-600)] transition-colors hover:text-[var(--blue-700)]"
                     >
-                      support@pintarly.com
+                      support@pintarly.id
                     </a>
                   </p>
                 </div>
